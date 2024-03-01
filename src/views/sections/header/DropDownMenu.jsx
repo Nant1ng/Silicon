@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const DropDownMenu = () => {
   return (
-    <div className="background">
+    <div className="dropdown-menu">
       <nav className="container" aria-label="Main menu">
         <Link to="/overview">Overview</Link>
         <Link to="/feature">Features</Link>
