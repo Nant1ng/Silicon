@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 
 import Silicon from "../../../assets/images/Silicon.svg";
+import SiliconText from "../../../assets/images/Silicon-logo-text.svg";
 
 import DropDownMenu from "./DropDownMenu";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -13,20 +15,20 @@ const Header = () => {
       <header>
         <div className="container">
           <div className="nav-item">
-            <a id="logo" href="/">
-              <img src="Silicon.svg" alt="Silicon icon" />
-              
+            <Link id="logo" to="/">
+              <img src={Silicon} alt="Silicon icon" />
+
               <img
                 className="silicon-logo-text"
-                src="../../../assets/images/Dilicon-logo-text.svg"
+                src={SiliconText}
                 alt="Silicon logo text"
               />
-            </a>
+            </Link>
             <nav className="nav-menu">
-              <a href="/overview">Overview</a>
-              <a href="/features">Features</a>
-              <a href="/news">News</a>
-              <a href="/contact">Contact</a>
+              <NavLink to="/overview">Overview</NavLink>
+              <NavLink to="/features">Features</NavLink>
+              <NavLink to="/news">News</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </nav>
           </div>
           <div className="right-side">
@@ -38,10 +40,10 @@ const Header = () => {
               </label>
               <label htmlFor="theme-switch-mode">Dark</label>
             </div>
-            <button className="btn-theme">
+            <Link className="btn btn-theme" to="/signin">
               <i className="fa-regular fa-user" />
               Sign in / up
-            </button>
+            </Link>
           </div>
           <div className="burger-menu">
             <Hamburger
