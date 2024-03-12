@@ -55,6 +55,11 @@ header {
           @include lg {
               display: flex;
           }
+        
+          a {
+            margin-left: 32px;
+          }
+
       }
       .burger-menu {
           
