@@ -1,0 +1,70 @@
+.home-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+
+    .logo {
+        display: flex;
+        gap: 7.5px ;
+    }
+
+  .navigation {
+    display: flex;
+    gap: 1rem;
+
+    @include md {
+        gap: 3.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $gray-800;
+    }
+  }
+
+  .market-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    height: 4.5rem;
+
+    @include md {
+      width: 25rem;
+    }
+
+    .market-btn {
+      width: 100px;
+
+      @include md {
+        width: 180px;
+      }
+    }
+  }
+
+  .social-btns {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      border: none;
+      border-radius: 5px;
+    }
+
+    i {
+      padding: 12px;
+    }
+  }
+
+  .copy-right {
+    max-width: 956px;
+    text-align: center;
+
+    p {
+        color: $gray-600;
+    }
+  }
+}
