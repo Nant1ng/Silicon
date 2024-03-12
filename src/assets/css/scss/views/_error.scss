@@ -1,0 +1,33 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  img {
+    width: 12.5rem;
+
+    @include md {
+      width: 25rem;
+    }
+  }
+
+  .error-title {
+    color: $gray-900;
+  }
+
+  .error-description {
+    color: $gray-700;
+  }
+
+  .copy-right-container {
+    width: 100%;
+
+    .copy-right {
+      color: $gray-600;
+      margin-top: 3.25rem;
+      margin-left: 10%;
+    }
+  }
+}
