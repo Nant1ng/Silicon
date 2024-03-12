@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 40px;
 
   img {
     width: 12.5rem;
@@ -19,15 +20,5 @@
 
   .error-description {
     color: $gray-700;
-  }
-
-  .copy-right-container {
-    width: 100%;
-
-    .copy-right {
-      color: $gray-600;
-      margin-top: 3.25rem;
-      margin-left: 10%;
-    }
   }
 }

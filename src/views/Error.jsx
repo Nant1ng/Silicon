@@ -17,9 +17,6 @@ const Error = () => {
          <span>Go to homepage</span>
         </Link>
       </div>
-      <div className="copy-right-container">
-        <p className="copy-right">2024. All rights reserved. Silicon Template</p>
-      </div>
     </main>
   );
 };
