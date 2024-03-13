@@ -1,0 +1,32 @@
+#brands {
+  padding: 60px 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "box" "box"
+      ;
+    justify-content: center;
+    gap: 10px;
+
+    @include md {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 156px;
+      padding: 41px 22px;
+      background-color: $white;
+      border: 1px solid rgba(226, 229, 241, 1);
+      border-radius: 8px;
+
+      @include md {
+        width: 196px;
+      }
+    }
+  }
+}
