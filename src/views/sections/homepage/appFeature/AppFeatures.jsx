@@ -11,7 +11,7 @@ import AppFeatureCard from "./AppFeatureCard";
 
 const features = [
   {
-    icon: {CreditCard},
+    icon: { CreditCard },
     title: "Easy Payments",
     description:
       "Id mollis consectetur congue egestas egestas suspendisse blandit justo.",
