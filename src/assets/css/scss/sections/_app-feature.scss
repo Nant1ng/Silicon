@@ -1,0 +1,57 @@
+.app-feature {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @include xl{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .details {
+        h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+
+            @include xl {
+                text-align: left;
+            }
+        }
+        .description {
+            width: 100%;
+            margin-bottom: 3.5rem;
+            text-align: center;
+
+            @include xl {
+                text-align: left !important;
+                max-width: 740px;
+                
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            
+            @include lg {
+                grid-template-columns: auto auto;
+            }
+            
+
+            .card {
+                max-width: 345px;
+                margin-bottom: 1.5rem;
+                text-align: center;
+
+                @include lg {
+                    text-align: left;
+                    margin-right: 56px;
+                }
+            }
+        }
+        
+    }
+}

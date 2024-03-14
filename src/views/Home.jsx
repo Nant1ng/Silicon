@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Showcase from "./sections/homepage/Showcase";
 import Brands from "./sections/homepage/Brands";
+import AppFeatures from "./sections/homepage/appFeature/AppFeatures";
 
 const Home = () => {
   // const url = "https://kyhnet23-assignment.azurewebsites.net/api/specialists";
@@ -34,9 +35,10 @@ const Home = () => {
       ))} */
   }
   return (
-    <main style={{ width: "100%" }}>
+    <main>
       <Showcase />
       <Brands />
+      <AppFeatures />
     </main>
   );
 };
