@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import Silicon from "../../../assets/images/Silicon.svg";
 import SiliconTextWhite from "../../../assets/images/Silicon-logo-text-white.svg";
-import EnvelopeIcon from "../../../assets/icons/Envelope.svg" 
 
 const Footer = () => {
   return (
@@ -24,7 +23,7 @@ const Footer = () => {
           <form className="form-container">
             <div className="input-group">
               <span className="input-icon">
-                <img src={EnvelopeIcon} alt="Envelope icon"/>
+                <img src="./icons/Envelope.svg" alt="Envelope icon"/>
               </span>
               <input
                 type="email"

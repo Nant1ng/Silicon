@@ -5,8 +5,6 @@ import Appstore from "../../../assets/images/appstore.svg";
 import Googleplay from "../../../assets/images/googleplay.svg";
 import ShowcaseMobiles from "../../../assets/images/Showcase-mobiles.svg";
 
-import ArrowDownIcon from "../../../assets/icons/ArrowDown.svg";
-
 const Showcase = () => {
   return (
     <section id="showcase">
@@ -28,7 +26,7 @@ const Showcase = () => {
           <Link className="more">
             <span className="icon-wrapper">
               <img
-                src={ArrowDownIcon}
+                src="./icons/ArrowDown.svg"
                 alt="Arrow pointing down"
                 className="icon"
               />

@@ -73,6 +73,10 @@
         text-decoration: none;
         padding-bottom: 1.5rem;
 
+        @include lg {
+          justify-content: flex-start;
+        }
+
         .icon-wrapper {
           display: flex;
           justify-content: center;
