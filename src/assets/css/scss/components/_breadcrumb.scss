@@ -1,0 +1,18 @@
+.breadcrumb {
+    display: flex;
+    justify-content: space-evenly;
+    width: 130px;
+    margin-bottom: 2rem;
+
+    img {
+        width: 1rem;
+    }
+
+    h2 {
+        @include text-s
+    }
+
+    .path-name {
+        color: $primary;
+    }
+}
