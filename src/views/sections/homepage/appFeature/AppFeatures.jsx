@@ -1,47 +1,41 @@
 import React from "react";
 
 import AppFeatureMobile from "../../../../assets/images/App-feature-mobile.svg";
-import CreditCard from "../../../../assets/icons/CreditCard.svg";
-import Shield from "../../../../assets/icons/Shield.svg";
-import BarsGraphic from "../../../../assets/icons/BarsGraphic.svg";
-import Communication from "../../../../assets/icons/Communication.svg";
-import Wallet from "../../../../assets/icons/Wallet.svg";
-import Happy from "../../../../assets/icons/Happy.svg";
 import AppFeatureCard from "./AppFeatureCard";
 
 const features = [
   {
-    icon: { CreditCard },
+    icon: "CreditCard",
     title: "Easy Payments",
     description:
       "Id mollis consectetur congue egestas egestas suspendisse blandit justo.",
   },
   {
-    icon: { Shield },
+    icon: "Shield",
     title: "Data Security",
     description:
       "Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.",
   },
   {
-    icon: { BarsGraphic },
+    icon: "BarsGraphic",
     title: "Cost Statistics",
     description:
       "Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.",
   },
   {
-    icon: { Communication },
+    icon: "Communication",
     title: "Support 24/7",
     description:
       "A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.",
   },
   {
-    icon: { Wallet },
+    icon: "Wallet",
     title: "Regular Cashback",
     description:
       "Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.",
   },
   {
-    icon: { Happy },
+    icon: "Happy",
     title: "Top Standards",
     description:
       "Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.",
