@@ -1,72 +1,71 @@
 header {
-    width: 100vw;
-  
-    div {
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 61.25rem;
+    height: 4.75rem;
+    margin: 0 auto;
+
+    #logo {
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      max-width: 61.25rem;
-      height: 4.75rem;
-      margin: 0 auto;
-  
-      #logo {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        margin-right: 3rem;
-      }
-  
-      #logo img {
-        margin-right: 7.5px;
-      }
-  
-      .nav-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-        .silicon-logo-text {
-          display: none;
-  
-          @include lg {
-            display: inline-block;
-          }
+      cursor: pointer;
+      margin-right: 3rem;
+    }
+
+    #logo img {
+      margin-right: 7.5px;
+    }
+
+    .nav-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .silicon-logo-text {
+        display: none;
+
+        @include lg {
+          display: inline-block;
         }
-  
-        .nav-menu {
-          display: none;
-  
-          @include lg {
-            display: flex;
-            width: 19.81rem;
-            justify-content: space-evenly;
-  
-            a {
-              text-decoration: none;
-              color: $gray-800;
-            }
-          }
-        }
-        
       }
-      .right-side {
-          display: none;
-  
-          @include lg {
-              display: flex;
-          }
-        
+
+      .nav-menu {
+        display: none;
+
+        @include lg {
+          display: flex;
+          width: 19.81rem;
+          justify-content: space-evenly;
+
           a {
-            margin-left: 32px;
+            text-decoration: none;
+            color: $gray-800;
           }
 
-      }
-      .burger-menu {
-          
-          @include lg {
-              display: none;
+          .active {
+            text-decoration: none;
+            color: $primary;
           }
+        }
+      }
+    }
+    .right-side {
+      display: none;
+
+      @include lg {
+        display: flex;
+      }
+
+      a {
+        margin-left: 32px;
+      }
+    }
+    .burger-menu {
+      @include lg {
+        display: none;
       }
     }
   }
-  
+}

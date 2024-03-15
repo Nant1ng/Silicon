@@ -1,12 +1,12 @@
 #brands {
   padding: 60px 0;
+  margin-right: 100px;
+  margin-left: 100px;
 
   .container {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-areas:
-      "box" "box"
-      ;
+    grid-template-areas: "box" "box";
     justify-content: center;
     gap: 10px;
 
