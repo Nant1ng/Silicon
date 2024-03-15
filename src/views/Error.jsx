@@ -13,8 +13,8 @@ const Error = () => {
       </p>
       <div>
         <Link to="/" className="btn btn-theme">
-          <i className="fa-solid fa-house" aria-hidden="true" />
-         <span>Go to homepage</span>
+          <img src="./icons/Home.svg" className="icon" alt="Home icon" />
+          <span>Go to homepage</span>
         </Link>
       </div>
     </main>
