@@ -6,7 +6,6 @@ export const usePostStore = () => useContext(PostStore);
 
 export const PostStoreProvider = ({ children }) => {
   const postData = async (endpoint, body = undefined) => {
-    console.log(body)
     const config =
       body !== undefined
         ? {

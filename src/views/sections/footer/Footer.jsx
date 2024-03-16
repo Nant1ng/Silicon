@@ -1,10 +1,33 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { usePostStore } from "../../../lib/postContext";
 
 import Silicon from "../../../assets/images/Silicon.svg";
 import SiliconTextWhite from "../../../assets/images/Silicon-logo-text-white.svg";
 
 const Footer = () => {
+  const { postData } = usePostStore();
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setIsSubscribed(false);
+    setError(false);
+
+    const res = await postData(`/subscribe?email=${email}`);
+
+    if (res.status === 200) {
+      setIsSubscribed(true);
+      setEmail("");
+    } else if (res.status >= 400) {
+      setError(true);
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="first-box">
@@ -20,16 +43,32 @@ const Footer = () => {
         </p>
         <div className="subscribe">
           <h2 className="headline">Subscribe to our newsletter</h2>
-          <form className="form-container">
+          <form
+            onSubmit={handleSubmit}
+            noValidate
+            className={`form-container 
+            ${isSubscribed ? "form-container-succeed" : ""}
+            ${error ? "form-container-error" : ""}`}
+          >
             <div className="input-group">
               <span className="input-icon">
-                <img src="./icons/Envelope.svg" alt="Envelope icon"/>
+                <img
+                  src={
+                    isSubscribed ? "./icons/EnvelopeGreen.svg" :
+                    error ? "./icons/EnvelopeRed.svg" :
+                    "./icons/Envelope.svg"
+                  }
+                  alt="Envelope icon"
+                />
               </span>
               <input
-                type="email"
                 id="emailInput"
+                type="email"
+                autoComplete="off"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="email-input"
-                placeholder="Your Email"
+                placeholder={isSubscribed ? "Subscribed" : "Your Email"}
                 aria-label="Your Email"
               />
             </div>

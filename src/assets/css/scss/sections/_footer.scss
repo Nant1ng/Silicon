@@ -71,6 +71,20 @@
         gap: 20px;
       }
 
+      .form-container-succeed {
+        border: 1px solid $success;
+        input::placeholder {
+          color: $success;
+        }
+      }
+
+      .form-container-error {
+        border: 1px solid $danger;
+        input::placeholder {
+          color: $danger;
+        }
+      }
+
       .input-group {
         display: flex;
         gap: 8px;
@@ -84,9 +98,9 @@
 
       .email-input {
         background: transparent;
+        outline: none;
         border: none;
         color: rgba(255, 255, 255, 0.4);
-        border: none;
       }
 
       .subscribe-btn {
