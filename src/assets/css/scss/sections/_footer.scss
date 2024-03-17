@@ -114,6 +114,12 @@
         padding: 11px 28px;
         cursor: pointer;
         border: none;
+
+        &:hover {
+          text-decoration: none;
+          background: $secondary;
+          color: $white;
+        }
       }
     }
   }
