@@ -1,0 +1,318 @@
+#news {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+
+  @include lg {
+    justify-items: start;
+  }
+
+  .header {
+    margin: 2.5rem 0;
+
+    @include lg {
+      margin-left: 5.5rem;
+    }
+
+    @include xl {
+      margin: 2.5rem 2.25rem;
+    }
+  }
+
+  .container {
+    max-width: 78.125rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10.75rem;
+
+    .news-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 416px;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      @include shadow-s;
+
+      .image-container {
+        border-radius: 0.5rem 0.5rem 0 0;
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1.39;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 16px 60px 80px;
+
+        .news-image {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .bookmark-icon {
+          position: absolute;
+          width: 36px;
+          height: 36px;
+          border-radius: 100px;
+          background-color: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 9px;
+          top: 1rem;
+          right: 1rem;
+        }
+
+        .bookmark-icon-image {
+          width: 100%;
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+
+      .details {
+        width: 100%;
+        max-width: 368px;
+        padding: 0 24px;
+
+        .meta {
+          margin-top: 24px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          font-size: 14px;
+          line-height: 160%;
+
+          .category {
+            font-family: Manrope, sans-serif;
+            font-weight: 600;
+            color: $gray-800;
+            background-color: $gray-200;
+            border-radius: 4px;
+            padding: 0 8px;
+            white-space: nowrap;
+          }
+
+          .date {
+            font-family: Manrope, sans-serif;
+            font-weight: 400;
+            color: $gray-600;
+            text-align: right;
+          }
+        }
+
+        .title {
+          margin-top: 23px;
+          color: $gray-800;
+        }
+
+        .separator {
+          margin-top: 29px;
+          width: 100%;
+          max-width: 368px;
+          height: 1px;
+          border: none;
+          background-color: rgba(226, 229, 241, 1);
+        }
+
+        .author {
+          margin-top: 24px;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          color: $gray-900;
+          font-weight: 700;
+
+          img {
+            width: 48px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#newsletter {
+  background-color: var(--Gray-100, #f3f6ff);
+          padding: 80px 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        @media (max-width: 991px) {
+          .newsletter-signup {
+            padding: 0 20px;
+          }
+        }
+
+        .signup-container {
+          max-width: 856px;
+          width: 100%;
+          margin-top: 21px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .signup-header {
+          display: flex;
+          gap: 20px;
+          align-items: flex-start;
+        }
+
+        @media (max-width: 991px) {
+          .signup-header {
+            flex-wrap: wrap;
+          }
+        }
+
+        .signup-title {
+          font-size: 40px;
+          
+        }
+
+        @media (max-width: 991px) {
+          .signup-title {
+            max-width: 100%;
+          }
+        }
+
+        .signup-icon {
+          width: 65px;
+          aspect-ratio: 0.95;
+          object-fit: auto;
+          object-position: center;
+        }
+
+        .signup-content {
+          margin-top: 27px;
+          display: flex;
+          gap: 1.5rem;
+          width: 100%;
+        }
+
+        @media (max-width: 991px) {
+          .signup-content {
+            flex-wrap: wrap;
+            max-width: 100%;
+          }
+        }
+
+        .signup-subtitle {
+          margin: auto 0;
+          color: $gray-900;
+          width: 150px;
+          
+        }
+
+        .checkbox-grid {
+          display: flex;
+          gap: 20px;
+          font-size: 14px;
+          color: var(--Gray-700, #565973);
+          font-weight: 400;
+          line-height: 160%;
+        }
+
+        @media (max-width: 991px) {
+          .checkbox-grid {
+            flex-wrap: wrap;
+          }
+        }
+
+        .column {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .row {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .signup-form {
+          margin-top: 64px;
+          display: flex;
+          gap: 16px;
+          font-size: 16px;
+          line-height: 160%;
+        }
+
+        @media (max-width: 991px) {
+          .signup-form {
+            flex-wrap: wrap;
+            margin-top: 40px;
+          }
+        }
+
+        .input-wrapper {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 0.5rem;
+          border: 1px solid rgba(212, 215, 229, 1);
+          border-radius: 8px;
+          background-color: $white;
+
+          @include md {
+            padding: 1rem;
+          }
+        }
+
+        .email-input {
+          background: transparent;
+          outline: none;
+          border: none;
+          color: $gray-500;
+          width: 100%;
+        }
+
+        .email-input::placeholder {
+          color: var(--Gray-500, #b4b7c9);
+        }
+
+        .terms-agreement {
+          margin-top: 22px;
+          color: $gray-600;
+        }
+
+        @media (max-width: 991px) {
+          .terms-agreement {
+            max-width: 100%;
+          }
+        }
+
+        .asterisk {
+          color: $primary;
+        }
+
+        .terms-link,
+        .privacy-link {
+          color: rgba(99, 102, 241, 1);
+          text-decoration: underline;
+        }
+
+        .checkbox-item {
+          display: flex;
+          gap: 8px;
+          flex: 1;
+          align-items: center;
+        }
+
+        .checkbox-input {
+          width: 24px;
+          height: 24px;
+          accent-color: var(--Brand-Primary, #6366f1);
+          cursor: pointer;
+        }

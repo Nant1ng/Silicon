@@ -62,7 +62,6 @@ const Footer = () => {
                 />
               </span>
               <input
-                id="emailInput"
                 type="email"
                 autoComplete="off"
                 value={email}
