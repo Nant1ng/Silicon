@@ -22,6 +22,7 @@ const Newsletter = () => {
     } else if (res.status >= 400) {
       setError(true);
     }
+    console.log("qwer");
   };
 
   return (
@@ -33,11 +34,10 @@ const Newsletter = () => {
             loading="lazy"
             src="./icons/NewsletterArrow.svg"
             alt="Newsletter icon"
-            className="signup-icon"
           />
         </div>
         <div className="signup-content">
-          <h5 className="signup-subtitle">Sign up for Newsletters</h5>
+          <h5 className="signup-title">Sign up for Newsletters</h5>
           <div className="checkbox-grid">
             <div className="column">
               <div className="row">
@@ -71,13 +71,26 @@ const Newsletter = () => {
             </div>
           </div>
         </div>
-        <form className="signup-form" noValidate>
-          <div className="input-wrapper">
-            <img src="./icons/Envelope.svg" />
+        <form className="signup-form" noValidate onSubmit={handleSubmit}>
+          <div
+            className={`input-wrapper
+          ${isSubscribed ? "input-wrapper-succeed" : ""}
+          ${error ? "input-wrapper-error" : ""}`}
+          >
+            <img
+              src={
+                isSubscribed ? "./icons/EnvelopeGreen.svg" : 
+                error ? "./icons/EnvelopeRed.svg" :
+                "./icons/Envelope.svg"
+              }
+              alt="Envelope icon"
+            />
             <input
               type="email"
               autoComplete="off"
-              placeholder="Your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={isSubscribed ? "Subscribed" : "Your Email"}
               aria-label="Enter your email"
               className="email-input"
             />

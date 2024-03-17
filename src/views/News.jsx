@@ -31,8 +31,8 @@ const News = () => {
           <h1>Our News</h1>
         </div>
         <div className="container">
-          {newsData.map((news, idx) => (
-            <NewCard key={idx} data={news} />
+          {newsData.map((news) => (
+            <NewCard key={news.id} data={news} />
           ))}
         </div>
       </section>
