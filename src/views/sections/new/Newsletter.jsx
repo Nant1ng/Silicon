@@ -31,7 +31,7 @@ const Newsletter = () => {
           <h2 className="signup-title">Don't Want to Miss Anything?</h2>
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bbc3589b28fe9787db1dadd314a469a27f487634aa5cff4e42544eb72505cfb?apiKey=8cc7244e2c8340d18b65f9464fda2ed9&"
+            src="./icons/NewsletterArrow.svg"
             alt="Newsletter icon"
             className="signup-icon"
           />
@@ -42,43 +42,31 @@ const Newsletter = () => {
             <div className="column">
               <div className="row">
                 <input type="checkbox" className="checkbox-input" />
-                <label htmlFor="">
-                  Daily Newsletter
-                </label>
+                <label htmlFor="">Daily Newsletter</label>
               </div>
               <div className="row">
                 <input type="checkbox" className="checkbox-input" />
-                <label htmlFor="">
-                  Event Updates
-                </label>
+                <label htmlFor="">Event Updates</label>
               </div>
             </div>
             <div className="column">
               <div className="row">
                 <input type="checkbox" checked className="checkbox-input" />
-                <label htmlFor="">
-                  Advertising Updates
-                </label>
+                <label htmlFor="">Advertising Updates</label>
               </div>
               <div className="row">
                 <input type="checkbox" className="checkbox-input" />
-                <label htmlFor="">
-                  Startups Weekly
-                </label>
+                <label htmlFor="">Startups Weekly</label>
               </div>
             </div>
             <div className="column">
               <div className="row">
                 <input type="checkbox" className="checkbox-input" />
-                <label htmlFor="">
-                  Week in Review
-                </label>
+                <label htmlFor="">Week in Review</label>
               </div>
               <div className="row">
                 <input type="checkbox" className="checkbox-input" />
-                <label htmlFor="">
-                  Podcasts
-                </label>
+                <label htmlFor="">Podcasts</label>
               </div>
             </div>
           </div>
