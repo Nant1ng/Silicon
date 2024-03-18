@@ -1,8 +1,8 @@
 #slider {
-    width: 100%;
+  width: 100%;
   background: $gray-100;
 
-  .content {
+  .slider-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@
       align-items: center;
       gap: 2rem;
 
-      .icon {
+      .carousel-icon {
         width: 36px;
         height: 36px;
         border-radius: 100px;
@@ -30,11 +30,11 @@
         @include shadow-s;
       }
 
-      .image-container {
+      .carousel-image-container {
         display: flex;
         gap: 5rem;
 
-        img {
+        .carousel-image {
           height: auto;
           width: 6.25rem;
 
@@ -59,13 +59,13 @@
       }
     }
 
-    .description {
+    .slider-description {
       display: flex;
       flex-direction: column;
       align-items: center;
       max-width: 39.5rem;
 
-      p {
+      .slider-description-text {
         text-align: center;
       }
     }
