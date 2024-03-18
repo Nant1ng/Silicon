@@ -10,6 +10,7 @@ import "./assets/css/main.min.css";
 import Header from "./views/sections/header/Header";
 import Home from "./views/Home";
 import News from "./views/News";
+import Contact from "./views/Contact";
 import Error from "./views/Error";
 import ConditionalFooter from "./views/sections/footer/ConditionalFooter";
 
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Routes>
               <Route path="" element={<Home />} />
               <Route path="/news" element={<News />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<Error />} />
             </Routes>
             <ConditionalFooter />

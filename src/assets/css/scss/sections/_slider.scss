@@ -1,0 +1,97 @@
+#slider {
+    width: 100%;
+  background: $gray-100;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    .slider-title {
+      margin-top: 5rem;
+    }
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 100px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 9px;
+        cursor: pointer;
+        @include shadow-s;
+      }
+
+      .image-container {
+        display: flex;
+        gap: 5rem;
+
+        img {
+          height: auto;
+          width: 6.25rem;
+
+          @include lg {
+            width: 14rem;
+          }
+
+          @include xl {
+            width: 100%;
+          }
+        }
+
+        .fade {
+          display: none;
+          filter: brightness(50%) blur(0.5px) opacity(65%);
+          transform: scale(0.9);
+
+          @include lg {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 39.5rem;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .progress-bar-container {
+      position: relative;
+      width: 100%;
+
+      .progress-bar-background {
+        border: 3px solid $gray-300;
+        background-color: #e2e5f1;
+        align-self: stretch;
+        height: 3px;
+        width: 100%;
+      }
+
+      .progress-bar {
+        position: absolute;
+        border: 3px solid $primary;
+        background-color: #6366f1;
+        align-self: stretch;
+        z-index: 10;
+        height: 3px;
+        width: 66%;
+        top: 0;
+      }
+    }
+  }
+}
