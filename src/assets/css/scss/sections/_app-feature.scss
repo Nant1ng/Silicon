@@ -20,13 +20,18 @@
       }
     }
     .description {
-      width: 100%;
+      max-width: 740px;
       margin-bottom: 3.5rem;
       text-align: center;
+      padding: 0 1rem;
+
+        @include md {
+          padding: 0;
+        }
 
       @include xl {
         text-align: left !important;
-        max-width: 740px;
+        
       }
     }
 

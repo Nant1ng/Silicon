@@ -65,6 +65,11 @@
 
     p {
         color: $gray-600;
+        padding: 0 1rem;
+
+        @include md {
+          padding: 0;
+        }
     }
   }
 }
