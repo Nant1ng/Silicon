@@ -1,32 +1,32 @@
 #brands {
-  padding: 60px 0;
-  margin-right: 100px;
-  margin-left: 100px;
+  padding: 3.75rem 0;
 
   .container {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: "box" "box";
-    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "box"
+      "box";
+    justify-items: center;
     gap: 10px;
 
     @include md {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     }
 
     .box {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 156px;
+      width: 9.75rem;
       padding: 41px 22px;
       background-color: $white;
       border: 1px solid rgba(226, 229, 241, 1);
-      border-radius: 8px;
+      border-radius: 0.5rem;
       cursor: pointer;
 
       @include md {
-        width: 196px;
+        width: 12.25rem;
       }
     }
   }

@@ -8,8 +8,7 @@
 
   .container {
     display: grid;
-    margin-right: 100px;
-    margin-left: 100px;
+    padding: 0 10%;
     grid-template-columns: 1fr auto;
     grid-template-areas:
       "img"
