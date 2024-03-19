@@ -1,0 +1,186 @@
+#testimonials {
+  background: radial-gradient(
+    120.91% 118.4% at 50% 100%,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(218, 70, 239, 0.05) 41.83%,
+    rgba(241, 244, 253, 0.07) 82.52%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  min-height: 542px;
+
+  @include lg {
+    padding: 5rem 3.75rem;
+  }
+
+  .container {
+    max-width: 81rem;
+
+    .testimonial-wrapper {
+      gap: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4rem 0;
+
+      @include lg {
+        flex-direction: row;
+        align-items: start;
+      }
+
+      .testimonial-header {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        @include lg {
+          width: 28%;
+        }
+
+        .testimonial-icons {
+          align-self: start;
+          display: flex;
+          margin-top: 73px;
+          gap: 1rem;
+
+          @include lg {
+            margin-top: 2.5rem;
+          }
+
+          .icon-wrapper {
+            align-items: center;
+            border-radius: 2.5rem;
+            @include shadow-s;
+            display: flex;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            padding: 0 0.5rem;
+            cursor: pointer;
+
+            .icon {
+              aspect-ratio: 1;
+              object-fit: auto;
+              object-position: center;
+              width: 1.25rem;
+            }
+          }
+        }
+      }
+
+      .testimonial-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: normal;
+        width: 72%;
+        margin-left: 1.25rem;
+
+        @include lg {
+          align-items: start;
+        }
+
+        .testimonial-list {
+          flex-grow: 1;
+          gap: 1.25rem;
+          display: flex;
+          flex-direction: column;
+
+          @include lg {
+            flex-direction: row;
+          }
+
+          .testimonial-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            max-width: 416px;
+
+            /* Help */
+            .quote-wrapper {
+                position: absolute;
+                top: 0;
+                left: 24;
+                display: flex;
+                width: 44px;
+                height: 44px;
+                padding: 12px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                @include shadow-primary;
+
+                .quote-icon {
+                  height: auto;
+                  width: 1.25rem;
+                }
+              }
+
+            .testimonial-card {
+              border-radius: 8px;
+              @include shadow-s;
+              
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+              padding: 3rem 1.5rem 1.5rem;
+
+              
+
+              .star-rating {
+                align-self: start;
+                display: flex;
+                gap: 2px;
+
+                .star-icon {
+                  aspect-ratio: 1;
+                  object-fit: auto;
+                  object-position: center;
+                  width: 1rem;
+                }
+              }
+              .testimonial-text {
+                @include text-lg;
+                margin-top: 1.5rem;
+              }
+
+              .author-info {
+                display: flex;
+                margin-top: 1.5rem;
+                gap: 1rem;
+                line-height: 160%;
+
+                .author-avatar {
+                  aspect-ratio: 1;
+                  object-fit: auto;
+                  object-position: center;
+                  width: 3rem;
+                }
+
+                .author-details {
+                  display: flex;
+                  flex-direction: column;
+                  flex-grow: 1;
+                  flex-basis: 0;
+                  width: fit-content;
+
+                  .author-name {
+                    font-weight: 700;
+                  }
+
+                  .author-title {
+                    @include text-s;
+                    color: $gray-600;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
