@@ -1,0 +1,91 @@
+#subscribe {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    height: auto;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+    background: $gray-100;
+    display: flex;
+    justify-content: center;
+
+    @include xl {
+      width: 81rem;
+      max-width: none;
+      height: 222px;
+    }
+
+    .subscribe-content {
+      display: flex;
+      flex-direction: column;
+      gap: 78px;
+      align-items: center;
+      margin: 2rem 0;
+
+      @include xl {
+        flex-direction: row;
+      }
+
+      .subscribe-text {
+        display: flex;
+        gap: 2rem;
+
+        h4 {
+          max-width: 416px;
+        }
+      }
+
+      .subscribe-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 30rem;
+        padding-left: 1rem;
+        background-color: $white;
+        border: 1px solid $gray-400;
+        border-radius: 0.5rem;
+
+        .subscribe-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: $gray-500;
+
+          .subscribe-input {
+            border: none;
+            background: transparent;
+            color: $gray-500;
+            outline: none;
+          }
+        }
+
+        .subscribe-btn {
+          padding: 13px 2rem;
+          background-color: $primary;
+          color: $white;
+          text-align: center;
+          border: none;
+          border-radius: 0 0.5rem 0.5rem 0;
+          cursor: pointer;
+        }
+      }
+
+      .subscribe-form-succeed {
+        border: 1px solid $success;
+        input::placeholder {
+          color: $success;
+        }
+      }
+
+      .subscribe-form-error {
+        border: 1px solid $danger;
+        input::placeholder {
+          color: $danger;
+        }
+      }
+    }
+  }
+}
