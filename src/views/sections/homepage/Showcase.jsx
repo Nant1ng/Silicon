@@ -26,7 +26,7 @@ const Showcase = () => {
           <Link className="more">
             <span className="icon-wrapper">
               <img
-                src="./icons/ArrowDown.svg"
+                src="./icons/ChevronDown.svg"
                 alt="Arrow pointing down"
                 className="icon"
               />
