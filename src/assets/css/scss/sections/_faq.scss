@@ -1,0 +1,191 @@
+#faq {
+  display: flex;
+  justify-content: center;
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 37.5rem;
+    gap: 3rem;
+    max-width: 81rem;
+    margin: 7rem 1rem;
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    .questions {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      h2 {
+        max-width: 20rem;
+      }
+
+      .panel-title {
+        max-width: 23rem;
+      }
+
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include md {
+          flex-direction: row;
+        }
+
+        .card {
+          width: 12.25rem;
+          height: 10.375rem;
+          padding: 1.5rem;
+          border-radius: 8px;
+          border: 1px solid $gray-300;
+
+          .card-icon {
+            margin-bottom: 1rem;
+          }
+
+          .panel-title {
+            @include text-s;
+            margin-bottom: 0.5rem;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.5rem;
+        max-width: 40rem;
+        padding: 1rem 1.5rem;
+        @include shadow-s;
+        background: #fff !important;
+        cursor: pointer;
+
+        @include md {
+          width: 40rem;
+        }
+
+        @include xxl {
+          width: 46.6rem;
+        }
+
+        .panel-title {
+          color: $gray-900;
+          font-weight: 600;
+        }
+
+        .more {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+          border-radius: 6px;
+          text-decoration: none;
+
+          @include lg {
+            justify-content: flex-start;
+          }
+
+          .icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            padding: 0 10px;
+            border-radius: 40px;
+            background-color: $gray-100;
+            box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),
+              0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+
+            .icon {
+              width: 1.25rem;
+            }
+          }
+        }
+      }
+
+      .panel-open {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        border-radius: 0.5rem;
+        max-width: 40rem;
+        padding: 1rem 1.5rem;
+        @include shadow-s;
+        background: #fff !important;
+        cursor: pointer;
+
+        @include md {
+          width: 40rem;
+        }
+
+        @include xxl {
+          width: 46.6rem;
+        }
+
+        .panel-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .panel-title {
+            color: $gray-900;
+            font-weight: 600;
+          }
+
+          .more {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            border-radius: 6px;
+            text-decoration: none;
+
+            @include lg {
+              justify-content: flex-start;
+            }
+
+            .icon-wrapper-open {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 36px;
+              height: 36px;
+              padding: 0 10px;
+              border-radius: 40px;
+              background-color: $primary;
+              box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),
+                0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+
+              .icon {
+                width: 1.25rem;
+              }
+            }
+          }
+        }
+        
+        .panel-description {
+          p {
+            @include text-s;
+          }
+        }
+      }
+    }
+  }
+}
