@@ -1,18 +1,22 @@
-.breadcrumb {
-    display: flex;
-    justify-content: space-evenly;
-    width: 130px;
-    margin-bottom: 2rem;
+#breadcrumb {
+  display: flex;
+  justify-content: space-evenly;
+  width: 8.12rem;
+  margin-bottom: 2rem;
 
-    img {
-        width: 1rem;
-    }
+  .home-icon {
+    width: 18px;
+  }
+  .chevron-icon {
+    width: 1rem;
+    margin: 0 0.75rem;
+  }
 
-    h2 {
-        @include text-s
-    }
+  h2 {
+    @include text-s;
+  }
 
-    .path-name {
-        color: $primary;
-    }
+  .path-name {
+    color: $primary;
+  }
 }

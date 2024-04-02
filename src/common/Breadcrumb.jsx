@@ -9,10 +9,14 @@ const Breadcrumb = ({ pathName }) => {
   const formattedPathname = formatPathname(pathName);
 
   return (
-    <section className="breadcrumb">
-      <img src="./icons/HomeGray.svg" alt="Home icon" />
+    <section id="breadcrumb">
+      <img src="./icons/HomeGray.svg" alt="Home icon" className="home-icon" />
       <h2>Home</h2>
-      <img src="./icons/ChevronsRight.svg" alt="Chevrons pointing right" />
+      <img
+        src="./icons/ChevronsRight.svg"
+        alt="Chevrons pointing right"
+        className="chevron-icon"
+      />
       <h2 className="path-name">{formattedPathname}</h2>
     </section>
   );
