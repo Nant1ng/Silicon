@@ -1,0 +1,154 @@
+#contact-us {
+  #hero {
+    width: 100%;
+    background-color: $gray-100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    @include md {
+      flex-direction: row;
+      gap: 10rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+
+      .header {
+        margin: 2.5rem 0;
+      }
+
+      .card {
+        max-width: 24.37rem;
+        min-height: 10.12rem;
+        display: flex;
+        gap: 1.5rem;
+
+        .icon-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 3.75rem;
+          height: 3.75rem;
+          padding: 1rem;
+          border-radius: 2.5rem;
+          @include shadow-s;
+          background-color: #fff !important;
+
+          .icon {
+            width: 1.75rem;
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+      }
+    }
+
+    .consult-form {
+      max-width: 636px;
+      min-height: 718px;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      @include shadow-l;
+      background: #fff !important;
+      margin-top: 5.87rem;
+
+      h2 {
+        margin-bottom: 2.5rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+
+        label {
+          margin-bottom: 0.5rem;
+          @include text-m;
+          color: $gray-900;
+          font-weight: 600;
+        }
+
+        input,
+        select {
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 0.25rem;
+          height: 3.25rem;
+          max-width: 30.68rem;
+
+          &:focus {
+            outline: none;
+            border-color: $primary;
+            box-shadow: 0 0 5px $primary;
+          }
+        }
+      }
+
+      .date-time {
+        display: flex;
+        gap: 1.5rem;
+
+        .date-time-input {
+          max-width: 14.62rem;
+
+          @include lg {
+            width: 14.62rem;
+          }
+        }
+      }
+
+      .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include lg {
+          flex-direction: row;
+          gap: 1.5rem;
+        }
+
+        .submit-btn {
+          width: 14.31rem;
+          height: 3.25rem;
+          margin-top: 40px;
+        }
+
+        .btn {
+          display: flex;
+          padding: 8px 28px;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          border-radius: 6px;
+          text-align: center;
+          font-size: 14px;
+        }
+
+        .appointmentBooked {
+          color: $white;
+          background: $success;
+          border: none;
+        }
+
+        .error {
+          color: $white;
+          background: $danger;
+          border: none;
+          
+        }
+      }
+    }
+  }
+
+  #map {
+    
+  }
+}
