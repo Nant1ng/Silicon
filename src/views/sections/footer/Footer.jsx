@@ -12,11 +12,21 @@ const Footer = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [error, setError] = useState(false);
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setIsSubscribed(false);
     setError(false);
+
+    if (!validateEmail(email)) {
+      setError(true);
+      return;
+    }
 
     const res = await postData(`/subscribe?email=${email}`);
 
@@ -54,9 +64,11 @@ const Footer = () => {
               <span className="input-icon">
                 <img
                   src={
-                    isSubscribed ? "./icons/EnvelopeGreen.svg" :
-                    error ? "./icons/EnvelopeRed.svg" :
-                    "./icons/Envelope.svg"
+                    isSubscribed
+                      ? "./icons/EnvelopeGreen.svg"
+                      : error
+                      ? "./icons/EnvelopeRed.svg"
+                      : "./icons/Envelope.svg"
                   }
                   alt="Envelope icon"
                 />
