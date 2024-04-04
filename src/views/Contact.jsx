@@ -8,6 +8,23 @@ import Breadcrumb from "../common/Breadcrumb";
 import Map from "../assets/images/Map.svg";
 import AddressCard from "./sections/contact/AddressCard";
 
+const AddressData = [
+  {
+    title: "Medical Center 1",
+    address: "4517 Washington Ave. Manchester, Kentucky 39495",
+    phone: "(406) 555-0120",
+    weekdaysOpen: "9:00 am – 22:00 am",
+    weekendOpen: "9:00 am – 20:00 am",
+  },
+  {
+    title: "Medical Center 2",
+    address: "2464 Royal Ln. Mesa,New Jersey 45463",
+    phone: "(406) 544-0123",
+    weekdaysOpen: "9:00 am – 22:00 am",
+    weekendOpen: "9:00 am – 20:00 am",
+  },
+];
+
 const Contact = () => {
   const { getData } = useFetchStore();
   const { postData } = usePostStore();
@@ -43,7 +60,7 @@ const Contact = () => {
 
     const userPickedDate = new Date(date);
     const currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0); // Reset hours to compare just dates
+    currentDate.setHours(0, 0, 0, 0); // Help from ChatGPT Reset hours to compare just dates
 
     return userPickedDate >= currentDate;
   };
@@ -89,23 +106,6 @@ const Contact = () => {
       console.error("Error during booking:", error);
     }
   };
-
-  const AddressData = [
-    {
-      title: "Medical Center 1",
-      address: "4517 Washington Ave. Manchester, Kentucky 39495",
-      phone: "(406) 555-0120",
-      weekdaysOpen: "9:00 am – 22:00 am",
-      weekendOpen: "9:00 am – 20:00 am",
-    },
-    {
-      title: "Medical Center 2",
-      address: "2464 Royal Ln. Mesa,New Jersey 45463",
-      phone: "(406) 544-0123",
-      weekdaysOpen: "9:00 am – 22:00 am",
-      weekendOpen: "9:00 am – 20:00 am",
-    },
-  ];
 
   return (
     <main id="contact-us">
@@ -229,9 +229,8 @@ const Contact = () => {
         </div>
       </section>
       <section id="map">
-        
-          <img src={Map} alt="Image of a map" className="map-image" />
-        
+        <img src={Map} alt="Image of a map" className="map-image" />
+
         <div className="address-container">
           {AddressData.map((addressData, idx) => (
             <AddressCard key={idx} data={addressData} />

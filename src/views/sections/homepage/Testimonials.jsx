@@ -1,31 +1,29 @@
-import React from "react";
+const testimonials = [
+  {
+    id: 1,
+    stars: 4,
+    content:
+      "Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.",
+    author: {
+      name: "Fannie Summers",
+      title: "Designer",
+      avatar: "./icons/heads/Fannie.svg",
+    },
+  },
+  {
+    id: 2,
+    stars: 5,
+    content:
+      "Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.",
+    author: {
+      name: "Albert Flores",
+      title: "Developer",
+      avatar: "./icons/heads/Albert.svg",
+    },
+  },
+];
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      stars: 4,
-      content:
-        "Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.",
-      author: {
-        name: "Fannie Summers",
-        title: "Designer",
-        avatar: "./icons/heads/Fannie.svg",
-      },
-    },
-    {
-      id: 2,
-      stars: 5,
-      content:
-        "Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.",
-      author: {
-        name: "Albert Flores",
-        title: "Developer",
-        avatar: "./icons/heads/Albert.svg",
-      },
-    },
-  ];
-
   return (
     <section id="testimonials">
       <div className="container">
