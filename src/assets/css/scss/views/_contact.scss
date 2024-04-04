@@ -58,7 +58,7 @@
       border-radius: 0.5rem;
       @include shadow-l;
       background: #fff !important;
-      margin-top: 5.87rem;
+      margin: 5.87rem 1rem 1rem 1rem;
 
       h2 {
         margin-bottom: 2.5rem;
@@ -109,7 +109,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
         @include lg {
           flex-direction: row;
           gap: 1.5rem;
@@ -142,13 +142,71 @@
           color: $white;
           background: $danger;
           border: none;
-          
         }
       }
     }
   }
 
   #map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 112px 0;
+    gap: 134px;
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    .map-image {
+      max-width: 100%;
+      height: auto;
+      margin: 0 1rem;
+    }
+
+    .address-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 0 1rem;
+
+      .address-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .card-content {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+
+          .card-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+
+          .last-card-row {
+            margin-left: 1.75rem;
+            margin-top: -0.75rem;
+          }
+        }
+      }
+
+      .social-btns {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
     
+        button {
+          border: none;
+          border-radius: 5px;
+        }
+    
+        i {
+          padding: 12px;
+        }
+      }
+    }
   }
 }

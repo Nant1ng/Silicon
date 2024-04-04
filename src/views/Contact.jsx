@@ -5,6 +5,8 @@ import { useFetchStore } from "../lib/fetchContext";
 import { usePostStore } from "../lib/postContext";
 
 import Breadcrumb from "../common/Breadcrumb";
+import Map from "../assets/images/Map.svg";
+import AddressCard from "./sections/contact/AddressCard";
 
 const Contact = () => {
   const { getData } = useFetchStore();
@@ -87,6 +89,23 @@ const Contact = () => {
       console.error("Error during booking:", error);
     }
   };
+
+  const AddressData = [
+    {
+      title: "Medical Center 1",
+      address: "4517 Washington Ave. Manchester, Kentucky 39495",
+      phone: "(406) 555-0120",
+      weekdaysOpen: "9:00 am – 22:00 am",
+      weekendOpen: "9:00 am – 20:00 am",
+    },
+    {
+      title: "Medical Center 2",
+      address: "2464 Royal Ln. Mesa,New Jersey 45463",
+      phone: "(406) 544-0123",
+      weekdaysOpen: "9:00 am – 22:00 am",
+      weekendOpen: "9:00 am – 20:00 am",
+    },
+  ];
 
   return (
     <main id="contact-us">
@@ -209,7 +228,38 @@ const Contact = () => {
           </form>
         </div>
       </section>
-      <section id="map"></section>
+      <section id="map">
+        
+          <img src={Map} alt="Image of a map" className="map-image" />
+        
+        <div className="address-container">
+          {AddressData.map((addressData, idx) => (
+            <AddressCard key={idx} data={addressData} />
+          ))}
+          <div className="social-btns">
+            <Link to="">
+              <button>
+                <i className="social-icon fa-brands fa-square-facebook" />
+              </button>
+            </Link>
+            <Link to="">
+              <button>
+                <i className="social-icon fa-brands fa-twitter" />
+              </button>
+            </Link>
+            <Link to="">
+              <button>
+                <i className="social-icon fa-brands fa-instagram" />
+              </button>
+            </Link>
+            <Link to="">
+              <button>
+                <i className="social-icon fa-brands fa-youtube" />
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
