@@ -45,15 +45,19 @@
           @include xl {
             width: 100%;
           }
-        }
 
-        .fade {
-          display: none;
-          filter: brightness(50%) blur(0.5px) opacity(65%);
-          transform: scale(0.9);
-
-          @include lg {
+          &.active {
             display: block;
+          }
+
+          &.fade {
+            display: none;
+            filter: brightness(50%) blur(0.5px) opacity(65%);
+            transform: scale(0.9);
+
+            @include lg {
+              display: block;
+            }
           }
         }
       }
@@ -73,6 +77,10 @@
           padding: 0;
         }
       }
+
+      .slider-content-none {
+        display: none;
+      }
     }
 
     .progress-bar-container {
@@ -90,12 +98,13 @@
       .progress-bar {
         position: absolute;
         border: 3px solid $primary;
-        background-color: #6366f1;
+        background-color: $primary;
         align-self: stretch;
         z-index: 10;
         height: 3px;
-        width: 66%;
+        width: 33%;
         top: 0;
+        transition: width 0.5s ease-in-out;
       }
     }
   }
